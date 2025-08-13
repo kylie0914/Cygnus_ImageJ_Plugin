@@ -64,7 +64,7 @@ channels (default: 12).
 ### Particle detection and colocalization : CBD_ComDet_Auto.ijm 
 This plugin automates particle detection and colocalization analysis in stacked images.
 
-<img width="462" height="395" alt="image" src="https://github.com/user-attachments/assets/44a4eb96-e4ab-4b4e-a951-005dd982d51b" />
+<img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/44a4eb96-e4ab-4b4e-a951-005dd982d51b" />
 
 **Function**
  It detects particles based on user-defined parameters (e.g., particle size, intensity threshold, and maximum distance for 
