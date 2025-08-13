@@ -2,9 +2,7 @@
  We have developed a suite of ImageJ plugins to facilitate the analysis of cyclic EV images. These plug
 ins perform background subtraction, multi-image alignment, image stacking, and particle detection (see 
 Supplementary Movie 1). The processes allow researchers to transform their raw data into a clean, 
-unified dataset ready for further analysis (e.g., Cygnus). The plugins are available for download at 
-https://The plugins are available for download.
-
+unified dataset ready for further analysis (e.g., Cygnus).
 ---
 
 
