@@ -5,6 +5,7 @@ Supplementary Movie 1). The processes allow researchers to transform their raw d
 unified dataset ready for further analysis (e.g., Cygnus). The plugins are available for download at 
 https://The plugins are available for download.
 
+
 ## Overall workflow
 Users should specify the directory containing raw input images (TIF format) and follow on-screen 
 prompts during interactive steps. The plugins automatically generate dedicated output directories for 
