@@ -1,9 +1,11 @@
-# Cygnus ImageJ Plugin - Multi-Image Alignment Code
+# Cygnus ImageJ Plugin - Multi-Image Alignment Code 
  We have developed a suite of ImageJ plugins to facilitate the analysis of cyclic EV images. These plug
 ins perform background subtraction, multi-image alignment, image stacking, and particle detection (see 
 Supplementary Movie 1). The processes allow researchers to transform their raw data into a clean, 
 unified dataset ready for further analysis (e.g., Cygnus). The plugins are available for download at 
 https://The plugins are available for download.
+
+---
 
 
 ## Overall workflow
@@ -13,3 +15,64 @@ processed results, maintaining an organized data architecture throughout the ana
 following sequential steps are performed:
 
 <img width="521" height="172" alt="image" src="https://github.com/user-attachments/assets/350ca56e-8d6e-4423-a74f-dd27263699db" />
+
+---
+
+### Background Subtraction : CBD_iter_SubBG.ijm 
+This plugin enhances the signal contrast by removing background signals from fluorescence images 
+using a rolling ball algorithm.
+
+**Function**
+It iteratively processes all .tif images in the input folder, applies background subtraction with a 50-pixel 
+rolling radius, and saves the cleaned images in a BackgroundSubtracted directory
+
+**Usage**
+ Users specify a folder containing raw .tif images, and the plugin outputs background-subtracted 
+images in a designated subfolder.
+
+### Image Alignment : CBD_Drawline_images.ijm 
+ This plugin allows users to define alignment markers (Fig. N1) by drawing reference lines on 
+fluorescence images.
+
+<img width="635" height="202" alt="image" src="https://github.com/user-attachments/assets/fc7df9b5-5065-4ddc-a789-e6b258340bf2" />
+
+**Function**
+ The plugin sequentially loads images from the input folder. The user draws a straight line connecting 
+two fluorescence markers on the first image, and the plugin replicates this line on subsequent images. 
+The updated images are saved in an output directory.
+
+**Usage**
+ Users input a folder with raw .tif images, and the plugin outputs images with alignment lines. Interaction 
+is required to draw the initial alignment line.
+
+### Image stacking : CBD_Stack_images.ijm 
+ This plugin aligns and stacks fluorescence images (Fig. N2) to create a unified dataset for analysis.
+
+<img width="636" height="252" alt="image" src="https://github.com/user-attachments/assets/80396900-61ee-4c4c-b580-705509e0c357" />
+
+**Function**
+It aligns each image to a reference image using predefined alignment lines, stacks the aligned images 
+into a hyperstack, and corrects for channel misalignment if necessary. The final stacked image is saved 
+as a .tif file.
+
+**Usage**
+Input is a folder containing images with alignment lines, and output is a single .tif file containing the 
+stacked images. Adjustable parameters include the reference channel (default: 1) and the number of 
+channels (default: 12).
+
+
+### Particle detection and colocalization : CBD_ComDet_Auto.ijm 
+This plugin automates particle detection and colocalization analysis in stacked images.
+
+<img width="462" height="395" alt="image" src="https://github.com/user-attachments/assets/44a4eb96-e4ab-4b4e-a951-005dd982d51b" />
+
+**Function**
+ It detects particles based on user-defined parameters (e.g., particle size, intensity threshold, and maximum distance for 
+colocalization), outputs results as CSV files, and saves annotated images and analysis results
+
+**Usage**
+ Input is a stacked .tif image, and output includes detection results in CSV format and processed images. Parameters 
+include particle size (default: 3.00 pixels), intensity threshold (default: 5.00 SD), and maximum colocalization distance 
+(default: 4.00 pixels).
+
+
