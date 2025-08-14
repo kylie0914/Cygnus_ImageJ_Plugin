@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16867064.svg)](https://doi.org/10.5281/zenodo.16867064)
+
 # Cygnus ImageJ Plugin - Multi-Image Alignment Code 
  We have developed a suite of ImageJ plugins to facilitate the analysis of cyclic EV images. These plug
 ins perform background subtraction, multi-image alignment, image stacking, and particle detection (see 
